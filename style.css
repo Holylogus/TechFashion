@@ -1,0 +1,31 @@
+*{
+  box-sizing: border-box;
+}
+#header-navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#header-navbar ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+}
+#header-navbar ul li{
+  padding: 1em;
+}
+#header-navbar ul li a{
+  text-decoration: none;
+}
+#header-navbar h1{
+  align-self: center;
+}
+#header-navbar .cart-button{
+  align-self: center;
+}
+header{
+  background-size: cover;
+  height: 100vh;
+}
+
