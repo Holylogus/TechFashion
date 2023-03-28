@@ -36,7 +36,7 @@ header{
 .navbar{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: rgba(102, 100, 100, 0.4);
   padding: 1em;
 }
@@ -60,4 +60,24 @@ header{
 }
 header h1{
   color: white;
+}
+.cards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+.productImg{
+  background-size: cover;
+}
+.article-container{
+  width: 1300px;
+  max-width: 1300px;
+  margin: auto;
+}
+.article-container h1{
+  padding-left: 1.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
