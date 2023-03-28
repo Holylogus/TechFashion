@@ -110,7 +110,7 @@ function article() {
     let cardImage = document.createElement("div")
     cardImage.classList.add("productImg")
     cardImage.style.height = "300px"
-    cardImage.style.width = "200px"
+    cardImage.style.width = "100%"
     cardImage.style.backgroundImage = `url(${TERMÉKEK[index].imgSource})` 
     let cardText = document.createElement("p")
     cardText.textContent = `${TERMÉKEK[index].model} ${TERMÉKEK[index].content}`
@@ -122,6 +122,35 @@ function article() {
     cards.appendChild(cardContainer)
   }
   articleContainer.appendChild(cards)
+
+  //KATEGÓRIÁK
+
+  //Tároló
+  let collections = document.createElement("div")
+  collections.classList.add("category")
+  ARTICLE.appendChild(collections)
+
+  //Feliratok
+  let textContainer = document.createElement("div")
+  textContainer.classList.add("feliratok")
+  let text = document.createElement("h2")
+  text.textContent = "Kategóriák"
+  let marketingText = document.createElement("p")
+  marketingText.textContent = "Válassz a különböző modern tecnológiák közül"
+  textContainer.appendChild(text)
+  textContainer.appendChild(marketingText)
+  collections.appendChild(textContainer)
+
+  //Kategriák kártyák - Smart Glasses
+  let smartGlassCategory = document.createElement("div")
+
+
+
+
+
+
+
+
 
 
 

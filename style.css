@@ -75,9 +75,14 @@ header h1{
   width: 1300px;
   max-width: 1300px;
   margin: auto;
+  padding: 1em;
 }
 .article-container h1{
   padding-left: 1.5em;
   padding-top: 1em;
   padding-bottom: 1em;
+}
+.category{
+  height: 100vh;
+  background-color: cadetblue;
 }
