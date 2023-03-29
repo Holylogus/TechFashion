@@ -19,30 +19,51 @@ export const TERMÉKEK = [
         model: "F06",
         content: "Smart audio szemüveg",
         price: "10.490,-Ft",
-        imgSource: "Kepek/F06_audio/F06_fashion1.PNG"
+        imgSource: "Kepek/Kiemelt_Termékek/F06_fashion1.PNG"
     },
     {
         model: "X11",
         content: "Smart audio szemüveg",
         price: "15.790,-Ft",
-        imgSource: "Kepek/X11_audio/X11_black.PNG"
+        imgSource: "Kepek/Kiemelt_Termékek/X11_black.PNG"
     },
     {
         model: "E10",
         content: "Smart audio szemüveg",
         price: "23.490,-Ft",
-        imgSource: "Kepek/E10/E10.PNG"
+        imgSource: "Kepek/Kiemelt_Termékek/E10.PNG"
     },
     {
         model: "MLIB",
         content: "Smart audio szemüveg",
         price: "21.550,-Ft",
-        imgSource: "Kepek/MLIB/MLIB_landing.PNG"
+        imgSource: "Kepek/Kiemelt_Termékek/MLIB_landing.PNG"
     },
     {
         model: "CY03",
         content: "Smart audio szemüveg",
         price: "17.990,-Ft",
-        imgSource: "Kepek/CY13/CY03_landing.PNG"
+        imgSource: "Kepek/Kiemelt_Termékek/CY03_landing.PNG"
+    }
+]
+
+export const KATEGORIAK = [
+    {
+        nev: "Szemüvegek",
+        height: "600px",
+        width: "500px",
+        src: "Kepek/F06_audio/F06_landing4.PNG"
+    },
+    {
+        nev: "Sapkák",
+        height: "285px",
+        width: "500px",
+        src: "Kepek/Sapka/Sapka1.PNG"
+    },
+    {
+        nev: "Órák",
+        height: "285px",
+        width: "500px",
+        src: "Kepek/watches/watches.PNG"
     }
 ]
