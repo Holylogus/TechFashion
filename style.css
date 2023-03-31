@@ -45,7 +45,7 @@ header{
 .navbar{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   background-color: rgba(102, 100, 100, 0.4);
   padding: 1em;
@@ -71,13 +71,15 @@ header{
   color: white;
 }
 .navbar button{
-  padding: 0.3em;
+  padding: 0.6em;
   border-radius: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 .navbar button img{
   padding-left: 1em;
 }
-
 header h1{
   color: white;
 }
@@ -163,7 +165,7 @@ footer{
 }
 
 
-@media screen and (max-width: 950px){
+@media screen and (max-width: 840px){
   header{
     height: 100vh;
     background-size: cover;
@@ -178,12 +180,10 @@ footer{
     padding-top: 1em;
     text-align: center;
   }
-  .navbar{
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+  .categoryButton{
+    padding-left: 2em;
+    padding-top: 3em;
   }
-}
-@media screen and (max-width: 1000px){
   .category{
     height: 100%;
     background-color: rgb(101, 102, 102, 0.6);
@@ -197,8 +197,5 @@ footer{
     align-self: center;
     background-size: cover;
 }
-.categoryButton{
-  padding-left: 2em;
-  padding-top: 3em;
-}
+
 }

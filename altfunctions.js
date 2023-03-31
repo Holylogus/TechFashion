@@ -33,14 +33,13 @@ function navBar() {
     vendor.textContent = "TechFashion";
     NAVBAR.appendChild(vendor);
     const CART = document.createElement("button");
-    CART.textContent = "Kosár";
+    CART.textContent = "Kosár"
     NAVBAR.appendChild(CART);
     let iconCart = document.createElement("img");
     iconCart.src = "Icons/cart.png";
     iconCart.alt = "kosár";
     iconCart.style.height = "25px"
     CART.appendChild(iconCart);
-    console.log("lefutottam")
   }
 
   

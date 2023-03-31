@@ -20,4 +20,4 @@
     hatterkepAktualisIndex = (hatterkepAktualisIndex + 1) % HATTERKEPEK.length;
     HEADER.style.backgroundImage = `url("${HATTERKEPEK[hatterkepAktualisIndex]}")`;
     });
-}
+ }
