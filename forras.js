@@ -50,20 +50,20 @@ export const TERMÉKEK = [
 export const KATEGORIAK = [
     {
         nev: "Szemüvegek",
-        height: "600px",
-        width: "500px",
+        height: "80vh",
+        width: "40vh",
         src: "Kepek/F06_audio/F06_landing4.PNG"
     },
     {
         nev: "Sapkák",
-        height: "285px",
-        width: "500px",
+        height: "38vh",
+        width: "40vh",
         src: "Kepek/Sapka/Sapka1.PNG"
     },
     {
         nev: "Órák",
-        height: "285px",
-        width: "500px",
+        height: "38vh",
+        width: "40vh",
         src: "Kepek/watches/watches.PNG"
     }
 ]

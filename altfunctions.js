@@ -147,7 +147,6 @@ export function categorys() {
         category.classList.add("categoryCard")
         category.style.height = `${KATEGORIAK[index].height}`
         category.style.width = `${KATEGORIAK[index].width}`
-        category.style.backgroundSize = "cover"
         category.style.backgroundImage = `url(${KATEGORIAK[index].src})`     
     let button = document.createElement("button")
     let buttonDiv = document.createElement("div")
