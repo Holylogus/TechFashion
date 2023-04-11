@@ -18,31 +18,31 @@ export const TERMÉKEK = [
     {
         model: "F06",
         content: "Smart audio szemüveg",
-        price: "10.490,-Ft",
+        price: 10500,
         imgSource: "Kepek/Kiemelt_Termékek/F06_fashion1.PNG"
     },
     {
         model: "X11",
         content: "Smart audio szemüveg",
-        price: "15.790,-Ft",
+        price: 15000,
         imgSource: "Kepek/Kiemelt_Termékek/X11_black.PNG"
     },
     {
         model: "E10",
         content: "Smart audio szemüveg",
-        price: "23.490,-Ft",
+        price: 23500,
         imgSource: "Kepek/Kiemelt_Termékek/E10.PNG"
     },
     {
         model: "MLIB",
         content: "Smart audio szemüveg",
-        price: "21.550,-Ft",
+        price: 21500,
         imgSource: "Kepek/Kiemelt_Termékek/MLIB_landing.PNG"
     },
     {
         model: "CY03",
         content: "Smart audio szemüveg",
-        price: "17.990,-Ft",
+        price: 18000,
         imgSource: "Kepek/Kiemelt_Termékek/CY03_landing.PNG"
     }
 ]
@@ -67,3 +67,5 @@ export const KATEGORIAK = [
         src: "Kepek/watches/watches.PNG"
     }
 ]
+
+export const CART = []

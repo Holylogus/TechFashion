@@ -5,7 +5,7 @@ import {
   categorys,
   news,
 } from "./altfunctions.js";
-import { hatterKezeles } from "./esemenykezeles.js";
+import { hatterKezeles,addToCart } from "./esemenykezeles.js";
 
 window.addEventListener("load", init);
 
@@ -25,6 +25,10 @@ function header() {
 function article() {
   kiemeltTermékek();
   categorys();
+  const addCart = document.querySelectorAll(".productCard span")
+  addCart.forEach(button => {
+    button.addEventListener('click', addToCart);
+  });
   news();
 }
 function footer() {

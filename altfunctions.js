@@ -1,11 +1,11 @@
-import { HATTERKEPEK, LANDIINGS, TERMÉKEK, KATEGORIAK } from "./forras.js";
+import { HATTERKEPEK, LANDIINGS as list, TERMÉKEK, KATEGORIAK, LANDIINGS } from "./forras.js";
 
 const HEADER = document.querySelector("header");
 const ARTICLE = document.querySelector("article")
 
 //Header rendezés
 export function headerRendezes(){
-    navBar();
+    navBar(/* linkek objektumai */ LANDIINGS, /* Cégnév: */"TechFashion");
     let headerContainer = document.createElement("div")
     headerContainer.classList.add("header-container")
     HEADER.appendChild(headerContainer)
@@ -13,24 +13,24 @@ export function headerRendezes(){
     headerContainer.appendChild(headerHatterNav())
  }
 
-function navBar() {
+function navBar(objList, companyName) {
     //Navigációs linkek generálás
     const NAVBAR = document.createElement("div");
     NAVBAR.classList.add("navbar");
     HEADER.appendChild(NAVBAR);
     const LandingPages = document.createElement("ul");
     NAVBAR.appendChild(LandingPages);
-    console.log(NAVBAR);
-    for (let index = 0; index < LANDIINGS.length; index++) {
+   /*  console.log(NAVBAR); */
+    for (let index = 0; index < objList.length; index++) {
       let liElements = document.createElement("li");
       LandingPages.appendChild(liElements);
       let links = document.createElement("a");
-      links.href = LANDIINGS[index].source;
-      links.textContent = LANDIINGS[index].szoveg;
+      links.href = objList[index].source;
+      links.textContent = objList[index].szoveg;
       liElements.appendChild(links);
     }
     let vendor = document.createElement("h1");
-    vendor.textContent = "TechFashion";
+    vendor.textContent = companyName;
     NAVBAR.appendChild(vendor);
     const CART = document.createElement("button");
     CART.textContent = "Kosár"
@@ -104,10 +104,14 @@ for (let index = 0; index < TERMÉKEK.length; index++) {
   let cardText = document.createElement("p")
   cardText.textContent = `${TERMÉKEK[index].model} ${TERMÉKEK[index].content}`
   let cardPrice = document.createElement("h3")
-  cardPrice.textContent = `${TERMÉKEK[index].price}`
+  cardPrice.textContent = `${TERMÉKEK[index].price},-Ft`
+  let addcart = document.createElement("span")
+  addcart.textContent = "Kosárba"
+  addcart.id = `${TERMÉKEK[index].model}`
   cardContainer.appendChild(cardImage)
   cardContainer.appendChild(cardText)
   cardContainer.appendChild(cardPrice)
+  cardContainer.appendChild(addcart)
   cards.appendChild(cardContainer)
 }
 return cards
@@ -119,8 +123,7 @@ export function categorys() {
     collections.classList.add("category")
     ARTICLE.appendChild(collections)
     collections.appendChild(categoryTexts())
-    collections.appendChild(categoryCards())
-    
+    collections.appendChild(categoryCards())  
 }
  
 

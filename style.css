@@ -110,6 +110,10 @@ header h1{
   margin: 1em;
   border-radius: 1em;
 }
+.productCard span:hover{
+ color: green;
+ text-decoration: underline;
+}
 .category{
   height: 100vh;
   background-color: rgb(101, 102, 102, 0.6);
