@@ -1,0 +1,84 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url(/Fonts/Montserrat/static/Montserrat-Italic.ttf);
+}
+body{
+  font-family: Montserrat;
+}
+button{
+  font-family: Montserrat;
+}
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: rgba(102, 100, 100, 0.4);
+  padding: 1em;
+  width: 100%;
+  align-items: center;
+}
+.navbar ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-self: center;
+}
+.navbar ul li{
+  padding: 1em;
+}
+.navbar ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 16pt;
+}
+.navbar h1{
+  color: white;
+}
+.navbar button{
+  padding: 0.6em;
+  border-radius: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.navbar button img{
+  padding-left: 1em;
+}
+article{
+  max-width: 1200px;
+  margin: auto;
+  width: 80%;
+}
+article h2{
+  text-align: center;
+  padding-bottom: 1em;
+}
+table{
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+}
+table th{
+  padding: 0.5em;
+  border: 1px solid black;
+
+}
+
+footer{
+  color: white;
+  background-color: black;
+  height: 40vh;
+}
+
+
+@media screen and (max-width: 840px){
+  
+
+}

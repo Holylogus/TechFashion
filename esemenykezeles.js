@@ -33,3 +33,9 @@
     }
     console.log(CART)
  }
+
+ 
+  export function openCart(event){ 
+    let url = 'Cart/cart.html'
+    window.location.href = url
+   }

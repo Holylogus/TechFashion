@@ -1,4 +1,5 @@
-import { HATTERKEPEK, LANDIINGS as list, TERMÉKEK, KATEGORIAK, LANDIINGS } from "./forras.js";
+import { HATTERKEPEK, TERMÉKEK, KATEGORIAK, LANDIINGS } from "./forras.js";
+import { openCart } from "./esemenykezeles.js";
 
 const HEADER = document.querySelector("header");
 const ARTICLE = document.querySelector("article")
@@ -13,7 +14,7 @@ export function headerRendezes(){
     headerContainer.appendChild(headerHatterNav())
  }
 
-function navBar(objList, companyName) {
+export function navBar(objList, companyName) {
     //Navigációs linkek generálás
     const NAVBAR = document.createElement("div");
     NAVBAR.classList.add("navbar");
@@ -36,10 +37,11 @@ function navBar(objList, companyName) {
     CART.textContent = "Kosár"
     NAVBAR.appendChild(CART);
     let iconCart = document.createElement("img");
-    iconCart.src = "Icons/cart.png";
+    iconCart.src = "/Icons/cart.png";
     iconCart.alt = "kosár";
     iconCart.style.height = "25px"
     CART.appendChild(iconCart);
+    CART.addEventListener('click', openCart)
   }
 
   
