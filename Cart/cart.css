@@ -70,7 +70,9 @@ table th{
   border: 1px solid black;
 
 }
-
+article{
+  padding: 1em;
+}
 footer{
   color: white;
   background-color: black;

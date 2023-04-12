@@ -36,6 +36,8 @@
 
  
   export function openCart(event){ 
+    const cartJSON = JSON.stringify(CART)
+    localStorage.setItem("cart", cartJSON)
     let url = 'Cart/cart.html'
     window.location.href = url
    }
