@@ -33,13 +33,12 @@ function table(objlist) {
     table.appendChild(columNames)
     for (let index = 0; index < objlist.length; index++) {
         let sor = document.createElement("tr")
-        for (const key in objlist[index]) {
-            let tartalom = document.createElement("th")
-            tartalom.textContent = `${objlist[index][key]}`
-            sor.appendChild(tartalom)
-        }
-        let torles = `<th><button>Törlés</button></th>`
-        sor.innerHTML += torles
+        let model = `<th>${objlist[index].model}</th>`
+        let content = `<th>${objlist[index].content}</th>`
+        let price = `<th>${objlist[index].price}</th>`
+        let quantity = `<th>${objlist[index].quantity}</th>`
+        let kezeles = `<th><button>Törlés</button><button> + </button><button> - </button></th>`
+        sor.innerHTML += model + content + price + quantity + kezeles
         table.appendChild(sor)
     }
     return table

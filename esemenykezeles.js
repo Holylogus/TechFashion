@@ -28,7 +28,15 @@
     console.log(productId)
     for (let index = 0; index < TERMÉKEK.length; index++) {
         if (TERMÉKEK[index].model == productId) {
-            CART.push(TERMÉKEK[index])           
+            for (let indexCart = 0; indexCart <= CART.length; index++) {
+                if (CART[indexCart] == productId) {
+                    CART[indexCart].quantity += 1
+                }
+                else{
+                    TERMÉKEK[index].quantity = 1
+                    CART.push(TERMÉKEK[index])
+                }
+            }          
         }    
     }
     console.log(CART)
@@ -36,8 +44,6 @@
 
  
   export function openCart(event){ 
-    const cartJSON = JSON.stringify(CART)
-    localStorage.setItem("cart", cartJSON)
     let url = 'Cart/cart.html'
     window.location.href = url
    }
