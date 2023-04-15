@@ -1,5 +1,6 @@
 import { CART, LANDIINGS, } from "../forras.js";
 import { navBar } from "../altfunctions.js";
+import { remove } from "./esemenyCart.js";
 
 
 window.addEventListener("load", init)
@@ -8,11 +9,13 @@ const ARTICLE = document.querySelector("article")
 const storedCartJSON = localStorage.getItem("cart")
 const storedCart = JSON.parse(storedCartJSON)
 
+
 function init() {
     navBar(LANDIINGS, "TechFashion")
     ARTICLE.appendChild(feliartH2("Kosár tartalma"));
     ARTICLE.appendChild(table(storedCart))
     console.log(storedCart)
+    $(".remove").on("click", remove);
 }
 
 function feliartH2(text) {
@@ -37,9 +40,10 @@ function table(objlist) {
         let content = `<th>${objlist[index].content}</th>`
         let price = `<th>${objlist[index].price}</th>`
         let quantity = `<th>${objlist[index].quantity}</th>`
-        let kezeles = `<th><button>Törlés</button><button> + </button><button> - </button></th>`
+        let kezeles = `<th><button class="remove"><span>Törlés</span></button> <button class="increase"><span> + </span></button> <button class="decrease"><span> - </span></button></th>`
         sor.innerHTML += model + content + price + quantity + kezeles
         table.appendChild(sor)
     }
+   
     return table
 }

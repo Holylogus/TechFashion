@@ -78,6 +78,10 @@ footer{
   background-color: black;
   height: 40vh;
 }
+table button{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 
 
 @media screen and (max-width: 840px){

@@ -7,11 +7,11 @@ export const HATTERKEPEK = [
 
 export const LANDIINGS = [{
     szoveg: "Kezdőlap",
-    source: "/index.html"   
+    source: "./index.html"
 },
 {
     szoveg: "Termékek",
-    source: "/products.html"}
+    source: "./products.html"}
 ]
 
 export const TERMÉKEK = [

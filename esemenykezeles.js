@@ -28,22 +28,27 @@
     console.log(productId)
     for (let index = 0; index < TERMÉKEK.length; index++) {
         if (TERMÉKEK[index].model == productId) {
-            for (let indexCart = 0; indexCart <= CART.length; index++) {
-                if (CART[indexCart] == productId) {
+            let foundInCart = false
+            for (let indexCart = 0; indexCart < CART.length; indexCart++) {
+                if (TERMÉKEK[index].model == CART[indexCart].model) {
                     CART[indexCart].quantity += 1
+                    foundInCart = true
+                    break
                 }
-                else{
-                    TERMÉKEK[index].quantity = 1
-                    CART.push(TERMÉKEK[index])
-                }
-            }          
-        }    
+            }
+            if (!foundInCart) {
+                TERMÉKEK[index].quantity = 1
+                CART.push(TERMÉKEK[index])
+            }
+        }
     }
     console.log(CART)
  }
 
  
   export function openCart(event){ 
-    let url = 'Cart/cart.html'
+    let url = './Cart/cart.html'
     window.location.href = url
+    const cartJSON = JSON.stringify(CART)
+    localStorage.setItem("cart",cartJSON)
    }
